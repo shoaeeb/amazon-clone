@@ -34,6 +34,11 @@ app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
 });
 
+// Serve Google verification file
+app.get('/google*.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', req.path));
+});
+
 // Database Connection
 mongoose
   .connect(process.env.MONGODB_URI)
