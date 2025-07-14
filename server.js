@@ -11,10 +11,28 @@ dotenv.config();
 // Initialize Express
 const app = express();
 
-// Middleware
+// SEO and Performance Middleware
+app.use((req, res, next) => {
+  // Security headers
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  next();
+});
+
+// CORS and Body Parser
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve sitemap and robots.txt
+app.get('/sitemap.xml', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'sitemap.xml'));
+});
+
+app.get('/robots.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build', 'robots.txt'));
+});
 
 // Database Connection
 mongoose

@@ -5,6 +5,7 @@ import { Row, Col } from "react-bootstrap";
 import Product from "../components/Product";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
+import SEO from "../components/SEO";
 import { listProducts } from "../actions/productActions";
 
 const HomeScreen = () => {
@@ -21,6 +22,11 @@ const HomeScreen = () => {
 
   return (
     <>
+      <SEO 
+        title={keyword ? `Search Results for "${keyword}" - Amazon Clone` : "Amazon Clone - Online Shopping | Electronics, Books, Clothing & More"}
+        description={keyword ? `Find products matching "${keyword}" at Amazon Clone` : "Discover amazing products at great prices. Shop electronics, books, clothing and more with fast shipping and secure checkout."}
+        keywords={keyword ? `${keyword}, online shopping, ecommerce` : "online shopping, ecommerce, electronics, books, clothing"}
+      />
       <h1>🛍️ Latest Products</h1>
       {loading ? (
         <Loader />

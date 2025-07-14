@@ -5,10 +5,27 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Amazon Clone - Your one-stop online shopping destination. Browse thousands of products, enjoy fast shipping, secure payments, and excellent customer service. Shop electronics, books, clothing, and more at unbeatable prices." />
+    <meta name="keywords" content="online shopping, ecommerce, amazon clone, electronics, books, clothing, fast shipping, secure payment, best deals, shopping cart, product reviews" />
+    <meta name="author" content="Amazon Clone" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://amazon-clone-1-t4xr.onrender.com" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Amazon Clone - Online Shopping Made Easy" />
+    <meta property="og:description" content="Discover amazing products at great prices. Shop electronics, books, clothing and more with fast shipping and secure checkout." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://amazon-clone-1-t4xr.onrender.com" />
+    <meta property="og:image" content="%PUBLIC_URL%/logo512.png" />
+    <meta property="og:site_name" content="Amazon Clone" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Amazon Clone - Online Shopping Made Easy" />
+    <meta name="twitter:description" content="Discover amazing products at great prices. Shop electronics, books, clothing and more." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/logo512.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -28,7 +45,23 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Amazon Clone</title>
+    <title>Amazon Clone - Online Shopping | Electronics, Books, Clothing & More</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Amazon Clone",
+      "url": "https://amazon-clone-1-t4xr.onrender.com",
+      "description": "Your one-stop online shopping destination for electronics, books, clothing and more",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://amazon-clone-1-t4xr.onrender.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

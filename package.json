@@ -9,7 +9,8 @@
     "dev": "node server.js",
     "seed": "node seeder.js",
     "seed:destroy": "node seeder.js -d",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "generate-sitemap": "node generateSitemap.js",
+    "heroku-postbuild": "cd client && npm install && npm run build && cd .. && npm run generate-sitemap"
   },
   "keywords": [],
   "author": "",
